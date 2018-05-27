@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stock Market App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body>
+      <h1>Hello Example</h1>
+  </body>
+  <script>
+    var socket = require('socket.io-client')('https://ws-api.iextrading.com/1.0/tops')
+
+    // Listen to the channel's messages
+    socket.on('message', message => console.log(message))
+
+    // Connect to the channel
+    socket.on('connect', () => {
+
+      // Subscribe to topics (i.e. appl,fb,aig+)
+      socket.emit('subscribe', 'snap,fb,aig+')
+
+      // Unsubscribe from topics (i.e. aig+)
+      socket.emit('unsubscribe', 'aig+')
+  });
+
+    // Disconnect from the channel
+    socket.on('disconnect', () => console.log('Disconnected.'));
+
+  </script>
+</html>

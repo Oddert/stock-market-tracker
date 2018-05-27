@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stock Market App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.17/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://use.fontawesome.com/c98d4b8a6d.js"></script>
+  </head>
+  <body>
+    <h1 class="header">Stock View</h1>
+    <!-- <div class="dispTimer" id="dispTimer"></div> -->
+    <!-- <button onClick="testadd()">Add goog</button> -->
+    <!-- <button onClick="renderGraph()">Render Graph</button> -->
+    <div class="timeButtons">
+      <button onClick="testCode('1d')">1 Day</button>
+      <button onClick="testCode('1m')">1 Month</button>
+      <button onClick="testCode('3m')">3 Months</button>
+      <button onClick="testCode('6m')">6 Months</button>
+      <button onClick="testCode('1y')">1 Year</button>
+      <button onClick="testCode('2y')">2 Years</button>
+      <button onClick="testCode('5y')">5 Years</button>
+    </div>
+    <div class="newStock">
+      <input type="text" id="newStockForm" />
+      <button onClick="internalAdd()">Add Stock <i class="fa fa-angle-right"></i></button>
+    </div>
+    <div class="removeButtons"></div>
+    <div class="root">
+      <h3><i class="fa fa-spinner fa-spin"></i> Loading...</h3>
+    </div>
+    <p class='signature'>
+      Application designed and built by <a href='https://github.com/Oddert'>Robyn Veitch. <i class='fa fa-github'></i></a>
+    </p>
+    <p class='iex_terms'>
+      Data provided for free by <a href='https://iextrading.com/developer/' target='_blank'>IEX</a>. View <a href='https://iextrading.com/api-exhibit-a/' target='_blank'>IEX’s Terms of Use</a>.
+    <p>
+  </body>
+</html>
