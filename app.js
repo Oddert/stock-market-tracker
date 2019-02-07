@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://Oddert:Bugatt1rulesoK@ds259499.mlab.com:59499/freecodecamp-playground');
+mongoose.connect('mongodb://' + MADE_WITH + ':' + SECRET + '@ds259499.mlab.com:59499/freecodecamp-playground');
 
 
 
