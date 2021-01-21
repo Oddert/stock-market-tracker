@@ -12,7 +12,7 @@
     "url": "git+https://github.com/Oddert/stock-market-tracker.git"
   },
   "author": "Robyn Veitch",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Oddert/stock-market-tracker/issues"
   },
