@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express       = require('express'),
     app           = express(),
     bodyParser    = require('body-parser'),
@@ -13,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://' + MADE_WITH + ':' + SECRET + '@ds259499.mlab.com:59499/freecodecamp-playground');
+mongoose.connect(process.env.DATABASE);
 
 
 
@@ -33,10 +34,10 @@ app.get('/basic', function (req, res) {
   res.render('basicline');
 });
 
+const PORT = process.env.PORT || 3000
 
-
-var server = app.listen(process.env.PORT || 3000, function () {
-  console.log("Server initialised on port 3000");
+var server = app.listen(PORT, function () {
+  console.log("Server initialised on port " + PORT);
 });
 
 

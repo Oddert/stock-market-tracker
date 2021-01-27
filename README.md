@@ -1,1 +1,2 @@
-# stock-market-tracker
+# Realtime Stock Market Tracker
+

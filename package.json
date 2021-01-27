@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Oddert/stock-market-tracker#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^8.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "moment": "^2.22.1",
