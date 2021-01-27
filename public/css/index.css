@@ -113,3 +113,20 @@ path, line {
   color: #34495e;
   font-size: 0.8em;
 }
+
+.itdonebroke {
+  font-size: 22px;
+  padding: 30px;
+  background: #fff;
+  background: #222;
+  color: #fff;
+  z-index: 1;
+  border-left: 10px solid #E84C3D;
+  box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.itdonebroke span {
+  margin: 10px 0;
+}
