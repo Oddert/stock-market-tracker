@@ -64,7 +64,8 @@ function getList() {
     if (err) {
       console.error(err);
     } else {
-      sublist = foundList[0].list;
+      if (Array.isArray(foundList[0].list)) sublist = foundList[0].list;
+      else sublist = []
       console.log("Sublist updated to: ", sublist);
     }
   });
