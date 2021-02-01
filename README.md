@@ -9,7 +9,7 @@ Node / express app using socket.io, built with MongoDB / Mongoose for data persi
 Stock data provided by [IEX Trading](https://iextrading.com/)
 
 # Live Demo
-[https://oddert-odd-blog.glitch.me/](https://oddert-odd-blog.glitch.me/)
+[https://crimson-bandana.glitch.me/](https://crimson-bandana.glitch.me/)
 
 # Installation
 ```
