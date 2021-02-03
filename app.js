@@ -6,9 +6,12 @@ var express       = require('express'),
     socketServer  = require('socket.io'),
     socketClient  = require('socket.io-client'),
     moment        = require('moment-timezone'),
-    mongoose      = require('mongoose');
+    mongoose      = require('mongoose'),
+    cors          = require('cors')
 
 var Sublist       = require('./models/sublist');
+
+app.use(cors())
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -44,7 +47,7 @@ var server = app.listen(PORT, function () {
 
 var socket = socketClient.connect('https://ws-api.iextrading.com/1.0/tops');
 
-socket.on('message', message => console.log(message));
+// socket.on('message', message => console.log({message}));
 
 socket.on('connect', () => {
   socket.emit('subscribe', 'fb,aapl');
@@ -64,7 +67,7 @@ function getList() {
     if (err) {
       console.error(err);
     } else {
-      if (Array.isArray(foundList[0].list)) sublist = foundList[0].list;
+      if (foundList[0] && Array.isArray(foundList[0].list)) sublist = foundList[0].list;
       else sublist = []
       console.log("Sublist updated to: ", sublist);
     }
