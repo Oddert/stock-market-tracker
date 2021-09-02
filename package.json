@@ -27,7 +27,7 @@
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.32",
     "mongoose": "^5.11.14",
-    "mpath": "^0.5.2",
+    "mpath": "^0.8.4",
     "socket.io": "^2.4.1"
   },
   "devDependencies": {
